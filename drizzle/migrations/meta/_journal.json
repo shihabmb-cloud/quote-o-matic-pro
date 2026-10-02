@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1790777385293,
+      "tag": "0000_crm_purchase_core",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790777477886,
+      "tag": "0001_crm_purchase_demo_data",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790863814392,
+      "tag": "0002_sales_data_access",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1790864137482,
+      "tag": "0003_hide_purchase_from_sales",
+      "breakpoints": true
+    }
+  ]
+}

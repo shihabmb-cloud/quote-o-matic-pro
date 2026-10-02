@@ -1,0 +1,168 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * OneTouch High Technology design system — "Frosted ops console".
+ * Dark navy canvas, frosted glass panels, blue/teal accents,
+ * explicit workflow status colors. All values live here.
+ */
+
+:root {
+  --radius: 0.75rem;
+
+  --background: #0b1220;
+  --foreground: #dbe4f3;
+
+  --card: #101a2b;
+  --card-foreground: #dbe4f3;
+  --popover: #101a2b;
+  --popover-foreground: #dbe4f3;
+
+  --primary: #2f6df6;
+  --primary-foreground: #ffffff;
+  --primary-soft: #6f9bff;
+
+  --secondary: #16233c;
+  --secondary-foreground: #dbe4f3;
+
+  --muted: #16233c;
+  --muted-foreground: #8ea3c4;
+
+  --accent: #14b8a6;
+  --accent-foreground: #04231f;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.14);
+  --ring: rgba(47, 109, 246, 0.6);
+
+  /* workflow status colors */
+  --status-new: #3b82f6;
+  --status-wait: #f59e0b;
+  --status-ready: #10b981;
+  --status-urgent: #ef4444;
+  --status-lost: #94a3b8;
+
+  --chart-1: #3b82f6;
+  --chart-2: #f59e0b;
+  --chart-3: #10b981;
+  --chart-4: #2f6df6;
+  --chart-5: #14b8a6;
+
+  --sidebar: #0d1728;
+  --sidebar-foreground: #dbe4f3;
+  --sidebar-primary: #2f6df6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #16233c;
+  --sidebar-accent-foreground: #dbe4f3;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgba(47, 109, 246, 0.6);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-new: var(--status-new);
+  --color-wait: var(--status-wait);
+  --color-ready: var(--status-ready);
+  --color-urgent: var(--status-urgent);
+  --color-lost: var(--status-lost);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(14px);
+}
+
+@utility glass2 {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px);
+}
+
+@utility app-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(60% 55% at 12% 8%, rgba(47, 109, 246, 0.28), transparent 60%),
+    radial-gradient(50% 50% at 92% 12%, rgba(20, 184, 166, 0.18), transparent 60%),
+    radial-gradient(70% 60% at 78% 96%, rgba(47, 109, 246, 0.16), transparent 60%);
+}
+
+@utility num {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility rowhover {
+  transition: background-color 160ms ease;
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+}
